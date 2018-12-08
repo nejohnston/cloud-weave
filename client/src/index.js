@@ -3,19 +3,20 @@ import ReactDOM from 'react-dom';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import './index.css';
-import Provider from 'react-dom';
+import { Provider } from 'react-redux';
+
 import PortfolioContainer from './containers/PortfolioContainer';
 import * as serviceWorker from './serviceWorker';
+
+import './index.css';
 
 const Portfolio = () => (
   <Provider>
     <Router>
       <Switch>
-        <Route exact pather='/' component={PortfolioContainer} />
+        <Route exact path='/' component={PortfolioContainer} />
       </Switch>
     </Router>
-    <PortfolioContainer />
   </Provider>
 );
 
