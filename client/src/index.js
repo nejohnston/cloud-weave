@@ -10,6 +10,11 @@ import * as serviceWorker from './serviceWorker';
 
 const Portfolio = () => (
   <Provider>
+    <Router>
+      <Switch>
+        <Route exact pather='/' component={PortfolioContainer} />
+      </Switch>
+    </Router>
     <PortfolioContainer />
   </Provider>
 );
