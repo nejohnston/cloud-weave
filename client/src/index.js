@@ -6,16 +6,20 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import PortfolioContainer from './containers/PortfolioContainer';
+
 import * as serviceWorker from './serviceWorker';
 
 import './index.css';
+import Layout from './components/Layout';
 
 const Portfolio = () => (
   <Provider>
     <Router>
-      <Switch>
-        <Route exact path='/' component={PortfolioContainer} />
-      </Switch>
+      <Layout>
+        <Switch>
+          <Route exact path='/' component={PortfolioContainer} />
+        </Switch>
+      </Layout>
     </Router>
   </Provider>
 );
