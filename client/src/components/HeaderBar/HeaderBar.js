@@ -1,5 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const HeaderBar = () => ()
+const HeaderBar = () => (
+  <div>
+    <p>header</p>
+  </div>
+);
 
-export default HeaderBar
+export default HeaderBar;
