@@ -1,9 +1,12 @@
 import React from 'react';
 import HeaderBar from '../HeaderBar';
 
-const Layout = () => (
+const Layout = ({ children }) => (
   <div>
-    <HeaderBar />
+    <div>
+      <HeaderBar />
+    </div>
+    <div>{children}</div>
   </div>
 );
 
