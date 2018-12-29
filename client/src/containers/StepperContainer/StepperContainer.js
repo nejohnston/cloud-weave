@@ -48,7 +48,7 @@ function getStepContent(step) {
   }
 }
 
-class SliderContainer extends Component {
+class StepperContainer extends Component {
   state = {
     activeStep: 0
   };
@@ -122,8 +122,8 @@ class SliderContainer extends Component {
   }
 }
 
-SliderContainer.propTypes = {
+StepperContainer.propTypes = {
   classes: PropTypes.object
 };
 
-export default withStyles(styles)(SliderContainer);
+export default withStyles(styles)(StepperContainer);

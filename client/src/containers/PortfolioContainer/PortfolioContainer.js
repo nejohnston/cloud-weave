@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import SliderContainer from '../SliderContainer';
+import StepperContainer from '../StepperContainer';
 
 class PortfolioContainer extends Component {
   render() {
@@ -8,7 +8,7 @@ class PortfolioContainer extends Component {
       <div>
         <p>hello</p>
         <div>
-          <SliderContainer />
+          <StepperContainer />
         </div>
       </div>
     );
