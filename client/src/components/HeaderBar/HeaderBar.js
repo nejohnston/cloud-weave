@@ -1,8 +1,12 @@
 import React from 'react';
 
+import Button from '@material-ui/core/Button';
+
 const HeaderBar = () => (
   <div>
-    <p>header</p>
+    <Button variant='contained' color='primary'>
+      Hello World
+    </Button>
   </div>
 );
 
