@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 
-import PortfolioContainer from './containers/PortfolioContainer/PortfolioContainer';
+import PortfolioContainer from './containers/PortfolioContainer';
 
 import * as serviceWorker from './serviceWorker';
 
