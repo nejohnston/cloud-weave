@@ -7,6 +7,7 @@ class PortfolioContainer extends Component {
     return (
       <div>
         <p>hello</p>
+        <p>my name is nicholas</p>
         <div>
           <StepperContainer />
         </div>
