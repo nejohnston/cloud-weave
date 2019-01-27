@@ -1,15 +1,13 @@
 import React from 'react';
 
-import AppBar from '@material-ui/core/AppBar';
-import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Toolbar } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar } from '@material-ui/core';
 
 const HeaderBar = () => (
   <div>
     <AppBar position='fixed'>
       <Toolbar>
-        <IconButton aria-label='menu'>
+        <IconButton aria-label='Menu'>
           <MenuIcon />
         </IconButton>
       </Toolbar>
