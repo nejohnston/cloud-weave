@@ -7,21 +7,19 @@ import {
   Menu,
   Toolbar,
   MenuItem,
-  MenuList
+  MenuList,
+  Tab,
+  Tabs
 } from '@material-ui/core';
 
 const HeaderBar = () => (
   <div>
     <AppBar position='sticky' color='default'>
       <Toolbar>
-        <IconButton aria-label='Menu'>
-          <MenuIcon />
-        </IconButton>
-        <Menu>
-          <MenuList>
-            <MenuItem>sdfdsfs</MenuItem>
-          </MenuList>
-        </Menu>
+        <Tabs>
+          <Tab label='About' />
+          <Tab label='projects' />
+        </Tabs>
       </Toolbar>
     </AppBar>
   </div>
