@@ -7,13 +7,13 @@ import NoSsr from '@material-ui/core/NoSsr';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
-function TabContainer(props) {
+const TabContainer = (props) => {
   return (
     <Typography component='div' style={{ padding: 8 * 3 }}>
       {props.children}
     </Typography>
   );
-}
+};
 
 TabContainer.propTypes = {
   children: PropTypes.node.isRequired
@@ -47,7 +47,7 @@ class HeaderBar extends React.Component {
 
     return (
       <NoSsr>
-        <div className={classes.root}>
+        <div>
           <AppBar position='static'>
             <Tabs
               variant='fullWidth'
@@ -56,7 +56,6 @@ class HeaderBar extends React.Component {
             >
               <LinkTab label='Page One' href='page1' />
               <LinkTab label='Page Two' href='page2' />
-              <LinkTab label='Page Three' href='page3' />
             </Tabs>
           </AppBar>
           {value === 0 && <TabContainer>Page One</TabContainer>}
@@ -68,8 +67,8 @@ class HeaderBar extends React.Component {
   }
 }
 
-NavTabs.propTypes = {
+HeaderBar.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-expor;
+export default HeaderBar;
