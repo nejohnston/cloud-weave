@@ -11,6 +11,7 @@ import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 import Layout from './components/Layout';
+import AboutContainer from './containers/AboutContainer';
 
 const Portfolio = () => (
   <Provider>
@@ -18,6 +19,7 @@ const Portfolio = () => (
       <Layout>
         <Switch>
           <Route exact path='/' component={PortfolioContainer} />
+          <Route exact path='/about' component={AboutContainer} />
         </Switch>
       </Layout>
     </Router>
