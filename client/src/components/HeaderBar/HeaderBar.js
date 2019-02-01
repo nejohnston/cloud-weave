@@ -1,16 +1,6 @@
 import React from 'react';
 
-import MenuIcon from '@material-ui/icons/Menu';
-import {
-  AppBar,
-  IconButton,
-  Menu,
-  Toolbar,
-  MenuItem,
-  MenuList,
-  Tab,
-  Tabs
-} from '@material-ui/core';
+import { AppBar, Toolbar, Tab, Tabs } from '@material-ui/core';
 
 const HeaderBar = () => (
   <div>
