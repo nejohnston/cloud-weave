@@ -17,10 +17,12 @@ const Portfolio = () => (
   <Provider>
     <Router>
       <Layout>
-        <Switch>
+        {/* <Switch>
           <Route exact path='/portfolio' component={PortfolioContainer} />
           <Route exact path='/about' component={AboutContainer} />
-        </Switch>
+        </Switch> */}
+        <AboutContainer />
+        <PortfolioContainer />
       </Layout>
     </Router>
   </Provider>
