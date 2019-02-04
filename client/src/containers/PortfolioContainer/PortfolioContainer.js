@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-import StepperContainer from '../StepperContainer';
-
+import './styles.css';
 class PortfolioContainer extends Component {
   render() {
     return (
