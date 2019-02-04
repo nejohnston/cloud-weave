@@ -18,7 +18,7 @@ const Portfolio = () => (
     <Router>
       <Layout>
         <Switch>
-          <Route exact path='/' component={PortfolioContainer} />
+          <Route exact path='/portfolio' component={PortfolioContainer} />
           <Route exact path='/about' component={AboutContainer} />
         </Switch>
       </Layout>

@@ -8,9 +8,6 @@ class PortfolioContainer extends Component {
       <div>
         <p>hello</p>
         <p>my name is nicholas</p>
-        <div>
-          <StepperContainer />
-        </div>
       </div>
     );
   }
