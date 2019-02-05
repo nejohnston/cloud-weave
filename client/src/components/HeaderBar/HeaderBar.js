@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppBar, Toolbar, Tab, Tabs, Button } from '@material-ui/core';
+import { AppBar, Toolbar, Button } from '@material-ui/core';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 const HeaderBar = () => (
@@ -17,7 +17,7 @@ const HeaderBar = () => (
           spy={true}
           smooth={true}
           offset={-70}
-          duration={500}
+          duration={750}
         >
           <Button>portfolio</Button>
         </Link>

@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 
-import PortfolioContainer from './containers/PortfolioContainer';
+import ProjectsContainer from './containers/ProjectsContainer';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -18,11 +18,11 @@ const Portfolio = () => (
     <Router>
       <Layout>
         {/* <Switch>
-          <Route exact path='/portfolio' component={PortfolioContainer} />
+          <Route exact path='/portfolio' component={ProjectsContainer} />
           <Route exact path='/about' component={AboutContainer} />
         </Switch> */}
         <AboutContainer />
-        <PortfolioContainer />
+        <ProjectsContainer />
       </Layout>
     </Router>
   </Provider>

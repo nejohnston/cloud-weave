@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './styles.css';
 
-class PortfolioContainer extends Component {
+class ProjectsContainer extends Component {
   render() {
     return (
       <div id='portfolio' className='container'>
@@ -13,4 +13,4 @@ class PortfolioContainer extends Component {
   }
 }
 
-export default PortfolioContainer;
+export default ProjectsContainer;
