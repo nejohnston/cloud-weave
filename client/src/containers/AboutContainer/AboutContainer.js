@@ -6,7 +6,7 @@ import './styles.css';
 class AboutContainer extends Component {
   render() {
     return (
-      <div>
+      <div className='container'>
         <p>about</p>
       </div>
     );
