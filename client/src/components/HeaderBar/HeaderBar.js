@@ -13,13 +13,13 @@ const HeaderBar = () => (
           </Link>
         </Button>
         <Link
-          to='portfolio'
+          to='projects'
           spy={true}
           smooth={true}
           offset={-70}
           duration={750}
         >
-          <Button>portfolio</Button>
+          <Button>projects</Button>
         </Link>
       </Toolbar>
     </AppBar>

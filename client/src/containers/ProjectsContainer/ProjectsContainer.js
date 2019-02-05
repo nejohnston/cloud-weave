@@ -5,7 +5,7 @@ import './styles.css';
 class ProjectsContainer extends Component {
   render() {
     return (
-      <div id='portfolio' className='container'>
+      <div id='projects' className='container'>
         <p>hello</p>
         <p>my name is nicholas</p>
       </div>
