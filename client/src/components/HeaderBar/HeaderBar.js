@@ -10,7 +10,9 @@ const HeaderBar = () => (
         <Button>
           <Link to='about'>about</Link>
         </Button>
-        <Button href='#portfolio'>portfolio</Button>
+        <Link to='portfolio'>
+          <Button>portfolio</Button>
+        </Link>
       </Toolbar>
     </AppBar>
   </div>
