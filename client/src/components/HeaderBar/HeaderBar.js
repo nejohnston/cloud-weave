@@ -8,9 +8,17 @@ const HeaderBar = () => (
     <AppBar position='sticky' color='default'>
       <Toolbar>
         <Button>
-          <Link to='about'>about</Link>
+          <Link to='about' spy={true} smooth={true} offset={-70} duration={500}>
+            about
+          </Link>
         </Button>
-        <Link to='portfolio'>
+        <Link
+          to='portfolio'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
           <Button>portfolio</Button>
         </Link>
       </Toolbar>
