@@ -2,11 +2,15 @@ import React from 'react';
 
 import { AppBar, Toolbar, Tab, Tabs, Button } from '@material-ui/core';
 
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 const HeaderBar = () => (
   <div>
-    <AppBar position='sticky' color='default'>
+    <AppBar position='fixed' color='default'>
       <Toolbar>
-        <Button href='#about'>about</Button>
+        <Button>
+          <AnchorLink href='#about'>about</AnchorLink>
+        </Button>
         <Button href='#portfolio'>portfolio</Button>
       </Toolbar>
     </AppBar>
