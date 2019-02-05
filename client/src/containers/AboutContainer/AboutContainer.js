@@ -6,8 +6,13 @@ import './styles.css';
 class AboutContainer extends Component {
   render() {
     return (
-      <div className='container'>
-        <p>about</p>
+      <div>
+        <div id='test' className='container'>
+          <p>tewst</p>
+        </div>
+        <div id='about' className='container'>
+          <p>about</p>
+        </div>
       </div>
     );
   }
