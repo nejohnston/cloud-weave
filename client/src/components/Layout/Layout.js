@@ -1,5 +1,6 @@
 import React from 'react';
 import HeaderBar from '../HeaderBar';
+import ToTopButton from '../ToTopButton/ToTopButton';
 
 const Layout = ({ children }) => (
   <div>
@@ -7,6 +8,7 @@ const Layout = ({ children }) => (
       <HeaderBar />
     </div>
     <div>{children}</div>
+    <ToTopButton />
   </div>
 );
 
