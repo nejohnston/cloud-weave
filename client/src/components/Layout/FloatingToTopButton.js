@@ -1,9 +1,14 @@
 import React from 'react';
 
-import { Button } from '@material-ui/core';
+import { Button, Fab } from '@material-ui/core';
+import UpIcon from '@material-ui/icons';
 
-const FloatingToTopButton = () => (
+const ToTopButton = () => (
   <div>
-    <Button />
+    <Fab>
+      <UpIcon />
+    </Fab>
   </div>
 );
+
+export default ToTopButton;
