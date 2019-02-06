@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AppBar, Toolbar, Button } from '@material-ui/core';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link, animateScroll } from 'react-scroll';
 
 const HeaderBar = () => (
   <div>
