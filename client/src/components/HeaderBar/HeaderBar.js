@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { AppBar, Toolbar, Button } from '@material-ui/core';
-import { Link, animateScroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const HeaderBar = () => (
-  <div>
+  <div id='header'>
     <AppBar position='sticky' color='default'>
       <Toolbar>
         <Button>

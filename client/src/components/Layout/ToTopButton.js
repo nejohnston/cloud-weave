@@ -41,6 +41,7 @@ import AddIcon from '@material-ui/icons/Add';
 import EditIcon from '@material-ui/icons/Edit';
 import UpIcon from '@material-ui/icons/KeyboardArrowUp';
 import green from '@material-ui/core/colors/green';
+import { Link, animateScroll } from 'react-scroll';
 
 const styles = (theme) => ({
   root: {
@@ -87,7 +88,9 @@ class ToTopButton extends Component {
       <div className={classes.root}>
         <Zoom in={true} timeout={transitionDuration} unmountOnExit>
           <Fab className={classes.fab}>
-            <UpIcon />
+            <Link to='header' spy={true} smooth={true} duration={500}>
+              <UpIcon />
+            </Link>
           </Fab>
         </Zoom>
       </div>
