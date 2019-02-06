@@ -1,7 +1,7 @@
-.root {
+.portfolioContainer {
   position: relative;
 }
 
 .toTopButton {
-  position: absolute;
+  position: fixed;
 }

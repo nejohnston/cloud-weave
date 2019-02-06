@@ -32,8 +32,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Zoom from '@material-ui/core/Zoom';
 import Fab from '@material-ui/core/Fab';
 import UpIcon from '@material-ui/icons/KeyboardArrowUp';
-import green from '@material-ui/core/colors/green';
 import { Link, animateScroll } from 'react-scroll';
+
+import './styles.css';
 
 const styles = (theme) => ({
   root: {
@@ -46,13 +47,6 @@ const styles = (theme) => ({
     position: 'absolute',
     bottom: theme.spacing.unit * 2,
     right: theme.spacing.unit * 2
-  },
-  fabGreen: {
-    color: theme.palette.common.white,
-    backgroundColor: green[500],
-    '&:hover': {
-      backgroundColor: green[600]
-    }
   }
 });
 
@@ -77,9 +71,9 @@ class ToTopButton extends Component {
     };
 
     return (
-      <div className={classes.root}>
+      <div className='toTopButton'>
         <Zoom in={true} timeout={transitionDuration} unmountOnExit>
-          <Fab className={classes.fab}>
+          <Fab>
             <Link to='header' spy={true} smooth={true} duration={500}>
               <UpIcon />
             </Link>
