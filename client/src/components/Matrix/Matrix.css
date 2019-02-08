@@ -1,0 +1,34 @@
+.Matrix {
+  background-color: #010101;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.MessageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.Message {
+  color: white;
+  font-family: 'Courier New', Courier, monospace !important;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.Message span {
+  font-family: 'Courier New', Courier, monospace !important;
+}
