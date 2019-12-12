@@ -24,7 +24,7 @@ const FadeText = (function() {
   function fade() {
     const spans = document.querySelectorAll('span[class^=anim]');
 
-    const helperArr = shuffle([...Array(spans.length).keys()]);
+    const helperArr = shuffle([ ...Array(spans.length).keys() ]);
 
     let time = 0;
 
@@ -42,7 +42,7 @@ const FadeText = (function() {
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
+      [ a[i], a[j] ] = [ a[j], a[i] ];
     }
     return a;
   }
