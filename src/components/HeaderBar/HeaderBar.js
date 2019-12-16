@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Drawer, Toolbar, Button, makeStyles } from '@material-ui/core';
+import { AppBar, Toolbar, Button } from '@material-ui/core';
 import { Link } from 'react-scroll';
 
 const HeaderBar = () => (
   <div id='header'>
-    {/* <Drawer variant='permanent' anchor='left'>
+    <AppBar position='sticky' color='default'>
       <Toolbar>
         <Link to='about' spy={true} smooth={true} offset={-70} duration={500}>
           <Button>about</Button>
@@ -20,7 +20,7 @@ const HeaderBar = () => (
           <Button>projects</Button>
         </Link>
       </Toolbar>
-    </Drawer> */}
+    </AppBar>
   </div>
 );
 

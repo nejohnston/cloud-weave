@@ -34,8 +34,6 @@ import Fab from '@material-ui/core/Fab';
 import UpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { Link, animateScroll } from 'react-scroll';
 
-import './styles.css';
-
 const styles = (theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
