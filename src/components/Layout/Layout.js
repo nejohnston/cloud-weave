@@ -17,9 +17,10 @@ const styles = (theme) => ({
 });
 
 const Layout = ({ children }) => (
-  <div>
+  <div className='root'>
     <HeaderBar />
     <div className='portfolioContainer'>{children}</div>
+
     <ToTopButton />
   </div>
 );

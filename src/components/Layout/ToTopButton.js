@@ -44,9 +44,15 @@ const styles = (theme) => ({
     minHeight: 200
   },
   fab: {
-    position: 'absolute',
-    bottom: theme.spacing.unit * 2,
-    right: theme.spacing.unit * 2
+    margin: 0,
+    top: 'auto',
+    right: 20,
+    bottom: 20,
+    left: 'auto',
+    position: 'fixed'
+  },
+  toTopButton: {
+    position: 'fixed'
   }
 });
 
@@ -71,15 +77,13 @@ class ToTopButton extends Component {
     };
 
     return (
-      <div className='toTopButton'>
-        <Zoom in={true} timeout={transitionDuration} unmountOnExit>
-          <Fab>
-            <Link to='header' spy={true} smooth={true} duration={500}>
-              <UpIcon />
-            </Link>
-          </Fab>
-        </Zoom>
-      </div>
+      <Zoom in={true} timeout={transitionDuration} unmountOnExit>
+        <Fab className={classes.fab}>
+          <Link to='header' spy={true} smooth={true} duration={500}>
+            <UpIcon />
+          </Link>
+        </Fab>
+      </Zoom>
     );
   }
 }
