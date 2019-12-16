@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import HeaderBar from '../HeaderBar';
-import ToTopButton from './ToTopButton';
+import ToTopButton from '../ToTopButton/ToTopButton';
 
 import './styles.css';
 
