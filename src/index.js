@@ -12,14 +12,20 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 import Layout from './components/Layout';
 import AboutContainer from './containers/AboutContainer';
+import { MuiThemeProvider } from 'material-ui/styles';
+import { createMuiTheme } from '@material-ui/core';
+
+const theme = createMuiTheme();
 
 const Portfolio = () => (
-  <Provider>
-    <Layout>
-      <AboutContainer />
-      <ProjectsContainer />
-    </Layout>
-  </Provider>
+  <MuiThemeProvider theme={theme}>
+    <Provider>
+      <Layout>
+        <AboutContainer />
+        <ProjectsContainer />
+      </Layout>
+    </Provider>
+  </MuiThemeProvider>
 );
 
 ReactDOM.render(<Portfolio />, document.getElementById('root'));

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppBar, Toolbar, Button } from '@material-ui/core';
+import { Drawer, Toolbar, Button } from '@material-ui/core';
 import { Link } from 'react-scroll';
 
 const SideBar = () => (

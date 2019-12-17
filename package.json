@@ -15,15 +15,16 @@
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "concurrently": "^3.5.0",
-    "firebase": "^4.9.0",
+    "firebase": "^7.6.0",
     "graphql": "^0.12.3",
     "graphql-tag": "^2.6.1",
     "json-server": "^0.15.1",
+    "json2mq": "^0.2.0",
     "lodash": "^4.17.15",
     "material-ui": "^0.19.4",
     "moment": "^2.20.1",
     "npm": "^6.13.4",
-    "prop-types": "^15.6.0",
+    "prop-types": "^15.7.2",
     "react": "^16.0.0",
     "react-anchor-link-smooth-scroll": "^1.0.11",
     "react-apollo": "^2.0.4",
@@ -47,7 +48,7 @@
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "react-scripts": "^1.0.14"
+    "react-scripts": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

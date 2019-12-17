@@ -1,9 +1,11 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import HeaderBar from '../HeaderBar';
 import ToTopButton from '../ToTopButton/ToTopButton';
 
 import './styles.css';
+import withWidth from 'material-ui/utils/withWidth';
+import SideBar from '../SideBar';
 
 const styles = (theme) => ({
   root: {
@@ -18,11 +20,10 @@ const styles = (theme) => ({
 
 const Layout = ({ children }) => (
   <div className='root'>
-    <HeaderBar />
+    {window.screen.width < 800 ? <HeaderBar /> : <SideBar />}
     <div className='portfolioContainer'>{children}</div>
-
     <ToTopButton />
   </div>
 );
 
-export default withStyles(styles)(Layout);
+export default withWidth()(Layout);
