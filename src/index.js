@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
+import store from './redux/store';
 
 import ProjectsContainer from './containers/ProjectsContainer';
 
@@ -19,7 +20,7 @@ const theme = createMuiTheme();
 
 const Portfolio = () => (
   <MuiThemeProvider theme={theme}>
-    <Provider>
+    <Provider store={store}>
       <Layout>
         <AboutContainer />
         <ProjectsContainer />

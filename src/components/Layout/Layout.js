@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import HeaderBar from '../HeaderBar';
 import ToTopButton from '../ToTopButton/ToTopButton';
+import { connect } from 'react-redux';
 
 import './styles.css';
-import withWidth from 'material-ui/utils/withWidth';
 import SideBar from '../SideBar';
 
 const styles = (theme) => ({
@@ -18,12 +18,18 @@ const styles = (theme) => ({
   }
 });
 
-const Layout = ({ children }) => (
-  <div className='root'>
-    {window.screen.width < 800 ? <HeaderBar /> : <SideBar />}
-    <div className='portfolioContainer'>{children}</div>
-    <ToTopButton />
-  </div>
-);
+const Layout = ({ window, children }) => {
+  return (
+    <div className='root'>
+      {window <= 800 ? <HeaderBar /> : <SideBar />}
+      <div className='portfolioContainer'>{children}</div>
+      <ToTopButton />
+    </div>
+  );
+};
 
-export default withWidth()(Layout);
+const mapStateToProps = (state) => ({
+  window: state.layout.window
+});
+
+export default connect(mapStateToProps)(Layout);
