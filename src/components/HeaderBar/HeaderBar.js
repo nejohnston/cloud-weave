@@ -5,9 +5,9 @@ import { Link } from 'react-scroll';
 
 const HeaderBar = () => (
   <div id='header'>
-    <AppBar position='sticky' color='default'>
+    <AppBar position='fixed' color='default'>
       <Toolbar>
-        <Avatar src='../../assets/images/me.jpg' />
+        <Avatar>NJ</Avatar>
         <Link to='about' spy={true} smooth={true} offset={-70} duration={500}>
           <Button>about</Button>
         </Link>

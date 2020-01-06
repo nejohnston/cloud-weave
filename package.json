@@ -42,8 +42,7 @@
     "run-dev": "0.0.1-security"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "eslint": "^4.7.2",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
@@ -57,5 +56,17 @@
     "eject": "react-scripts eject",
     "json-server": "json-server --watch ../server/db.json --port 3001",
     "dev": "concurrently \"react-scripts start\" \"json-server --watch ../server/db.json --port 3001\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
