@@ -1,24 +1,19 @@
-const FETCH_PRODUCTS_PENDING = 'FETCH_PRODUCTS_PENDING';
-const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
-const FETCH_PRODUCTS_ERROR = 'FETCH_PRODUCTS_ERROR';
+const FETCH_NEWS_PENDING = 'FETCH_NEWS_PENDING';
+const FETCH_NEWS_SUCCESS = 'FETCH_NEWS_SUCCESS';
+const FETCH_NEWS_ERROR = 'FETCH_NEWS_ERROR';
 
-export const updateWindowState = (window) => ({
-  type: UPDATE_WINDOW_STATE,
-  payload: window
-});
-
-export const fetchProductsPending = () => ({
-  type: FETCH_PRODUCTS_PENDING,
+export const fetchNewsPending = () => ({
+  type: FETCH_News_PENDING,
   payload: pending
 });
 
-export const fetchProductsSuccess = (news) => ({
-  type: FETCH_PRODUCTS_SUCCESS,
-  products: news
+export const fetchNewsSuccess = (news) => ({
+  type: FETCH_NEWS_SUCCESS,
+  payload: news
 });
 
-export const fetchProductsError = (error) => ({
-  type: FETCH_PRODUCTS_ERROR,
+export const fetchNewsError = (error) => ({
+  type: FETCH_NEWS_ERROR,
   error: error
 });
 
@@ -31,18 +26,18 @@ export default function(
   action
 ) {
   switch (action.type) {
-    case FETCH_PRODUCTS_PENDING:
+    case FETCH_NEWS_PENDING:
       return {
         ...state,
         pending: true
       };
-    case FETCH_PRODUCTS_SUCCESS:
+    case FETCH_NEWS_SUCCESS:
       return {
         ...state,
         pending: false,
-        products: action.payload
+        news: action.payload
       };
-    case FETCH_PRODUCTS_ERROR:
+    case FETCH_NEWS_ERROR:
       return {
         ...state,
         pending: false,
