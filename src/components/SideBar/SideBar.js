@@ -10,7 +10,7 @@ import {
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-scroll';
 
-const drawerWidth = 200;
+const drawerWidth = 190;
 
 const styles = {
   avatar: {
