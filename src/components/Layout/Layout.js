@@ -8,9 +8,11 @@ import SideBar from '../SideBar';
 
 const Layout = ({ window, children }) => {
   return (
-    <div className='root'>
+    <div id='header' className='root'>
       {window <= 800 ? <HeaderBar /> : <SideBar />}
-      <div className='portfolioContainer'>{children}</div>
+      <div id='header' className='portfolioContainer'>
+        {children}
+      </div>
       <ToTopButton />
     </div>
   );

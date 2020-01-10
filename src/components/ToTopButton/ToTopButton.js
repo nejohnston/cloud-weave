@@ -60,6 +60,7 @@ class ToTopButton extends Component {
   };
 
   handleChange = (event, value) => {
+    event.preventDefault();
     this.setState({ value });
   };
 
