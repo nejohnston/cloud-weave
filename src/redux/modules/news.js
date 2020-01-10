@@ -1,21 +1,32 @@
-const FETCH_NEWS_PENDING = 'FETCH_NEWS_PENDING';
-const FETCH_NEWS_SUCCESS = 'FETCH_NEWS_SUCCESS';
-const FETCH_NEWS_ERROR = 'FETCH_NEWS_ERROR';
+const GET_NEWS_PENDING = 'GET_NEWS_PENDING';
+const GET_NEWS_SUCCESS = 'GET_NEWS_SUCCESS';
+const GET_NEWS_ERROR = 'GET_NEWS_ERROR';
 
-export const fetchNewsPending = () => ({
-  type: FETCH_News_PENDING,
+export const getNewsPending = () => ({
+  type: GET_NEWS_PENDING,
   payload: pending
 });
 
-export const fetchNewsSuccess = (news) => ({
-  type: FETCH_NEWS_SUCCESS,
+export const getNews = (news) => ({
+  type: GET_NEWS_SUCCESS,
   payload: news
 });
 
-export const fetchNewsError = (error) => ({
-  type: FETCH_NEWS_ERROR,
+export const getNewsError = (error) => ({
+  type: GET_NEWS_ERROR,
   error: error
 });
+
+export const fetchNews = () => (dispatch) => {
+  dispatch(getAboutLoading());
+
+  return fetch(ABOUT_ENDPOINT)
+    .then((res) => res.json())
+    .then((event) => {
+      dispatch(getAbout(event));
+    })
+    .catch((error) => dispatch(getAboutError(error)));
+};
 
 export default function(
   state = {
@@ -26,18 +37,18 @@ export default function(
   action
 ) {
   switch (action.type) {
-    case FETCH_NEWS_PENDING:
+    case GET_NEWS_PENDING:
       return {
         ...state,
         pending: true
       };
-    case FETCH_NEWS_SUCCESS:
+    case GET_NEWS_SUCCESS:
       return {
         ...state,
         pending: false,
         news: action.payload
       };
-    case FETCH_NEWS_ERROR:
+    case GET_NEWS_ERROR:
       return {
         ...state,
         pending: false,
