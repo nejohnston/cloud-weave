@@ -1,38 +1,10 @@
-// import React from 'react';
-
-// import { Fab, Zoom } from '@material-ui/core';
-// import UpIcon from '@material-ui/icons/ArrowUpward';
-
-// import './styles.css';
-
-// const ToTopButton = () => (
-//   <div className='toTopButton'>
-//     <Zoom
-//       in={this.state.value === index}
-//       timeout={transitionDuration}
-//       style={{
-//         transitionDelay: `${this.state.value === index
-//           ? transitionDuration.exit
-//           : 0}ms`
-//       }}
-//       unmountOnExit
-//     >
-//       <Fab>
-//         <UpIcon />
-//       </Fab>
-//     </Zoom>
-//   </div>
-// );
-
-// export default ToTopButton;
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Zoom from '@material-ui/core/Zoom';
 import Fab from '@material-ui/core/Fab';
 import UpIcon from '@material-ui/icons/KeyboardArrowUp';
-import { Link, animateScroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const styles = (theme) => ({
   root: {
