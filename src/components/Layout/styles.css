@@ -1,3 +1,8 @@
 .portfolioContainer {
   position: relative;
 }
+
+.portfolioContainerSidebar {
+  position: relative;
+  padding-left: 210px;
+}

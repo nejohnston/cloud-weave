@@ -10,40 +10,32 @@ import {
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-scroll';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const styles = {
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: drawerWidth
-  },
   avatar: {
-    height: 200,
-    alignContent: 'center',
+    width: drawerWidth,
+    height: '20%',
+    display: 'flex',
     justifyContent: 'center',
-    paddingLeft: 100
+    alignItems: 'flex-end'
   },
   drawer: {
     width: drawerWidth,
     flexShrink: 0
   },
   toolbar: {
-    height: '100%',
+    width: drawerWidth,
+    height: '60%',
     flexDirection: 'column',
     justifyContent: 'center'
-  },
-  content: {
-    flexGrow: 1
-    // backgroundColor: theme.palette.background.default,
-    // padding: theme.spacing(3)
   }
 };
 
 const SideBar = (props) => {
   const { classes } = props;
   return (
-    <div className={classes.root}>
+    <div className={classes.drawer}>
       <Drawer variant='permanent' anchor='left' className={classes.drawer}>
         <CssBaseline />
         <div className={classes.avatar}>

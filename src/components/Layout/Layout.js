@@ -10,7 +10,12 @@ const Layout = ({ window, children }) => {
   return (
     <div id='header' className='root'>
       {window <= 800 ? <HeaderBar /> : <SideBar />}
-      <div id='header' className='portfolioContainer'>
+      <div
+        id='header'
+        className={
+          window <= 800 ? 'portfolioContainer' : 'portfolioContainerSidebar'
+        }
+      >
         {children}
       </div>
       <ToTopButton />
