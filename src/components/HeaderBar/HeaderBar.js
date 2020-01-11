@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   AppBar,
@@ -8,10 +9,20 @@ import {
   MenuItem,
   IconButton
 } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-scroll';
 
-const HeaderBar = () => {
+const styles = {
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  }
+};
+
+const HeaderBar = (props) => {
+  const { classes } = props;
+
   const [ anchorEl, setAnchorEl ] = React.useState(null);
 
   const handleClick = (event) => {
@@ -25,7 +36,7 @@ const HeaderBar = () => {
   return (
     <div id='header'>
       <AppBar position='fixed' color='default'>
-        <Toolbar>
+        <Toolbar className={classes.header}>
           <Avatar>NJ</Avatar>
           <IconButton
             aria-controls='simple-menu'
@@ -72,4 +83,8 @@ const HeaderBar = () => {
   );
 };
 
-export default HeaderBar;
+HeaderBar.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(HeaderBar);
