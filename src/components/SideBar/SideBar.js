@@ -39,7 +39,17 @@ const SideBar = (props) => {
       <Drawer variant='permanent' anchor='left' className={classes.drawer}>
         <CssBaseline />
         <div className={classes.avatar}>
-          <Avatar>NJ</Avatar>
+          <Avatar>
+            <Link
+              to='test'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={750}
+            >
+              NJ
+            </Link>
+          </Avatar>
         </div>
         <Toolbar className={classes.toolbar}>
           <Link to='about' spy={true} smooth={true} offset={-70} duration={500}>

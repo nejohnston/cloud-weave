@@ -9,9 +9,9 @@ export const getProjectsLoading = (isLoading) => ({
   payload: isLoading
 });
 
-export const getProjects = (projectData) => ({
+export const getProjects = (project) => ({
   type: GET_PROJECTS_SUCCESS,
-  payload: projectData
+  payload: project
 });
 
 export const getProjectsError = (error) => ({
@@ -25,7 +25,7 @@ export const fetchProjects = () => (dispatch) => {
   return fetch(PROJECTS_ENDPOINT)
     .then((res) => res.json())
     .then((event) => {
-      dispatch(getAbout(event));
+      dispatch(getProjects(event));
     })
     .catch((error) => dispatch(getProjectsError(error)));
 };
@@ -33,7 +33,7 @@ export const fetchProjects = () => (dispatch) => {
 export default function(
   state = {
     isLoading: false,
-    projectData: [],
+    project: [],
     error: ''
   },
   action
@@ -49,7 +49,7 @@ export default function(
       return {
         ...state,
         isLoading: false,
-        projects: action.payload,
+        project: action.payload,
         error: ''
       };
     case GET_PROJECTS_ERROR:

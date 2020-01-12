@@ -33,11 +33,14 @@ const HeaderBar = (props) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <div id='header'>
       <AppBar position='fixed' color='default'>
         <Toolbar className={classes.header}>
-          <Avatar>NJ</Avatar>
+          <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
+            <Avatar>NJ</Avatar>
+          </Link>
           <IconButton
             aria-controls='simple-menu'
             aria-haspopup='true'
