@@ -9,9 +9,9 @@ export const getProjectsLoading = (isLoading) => ({
   payload: isLoading
 });
 
-export const getProjects = (project) => ({
+export const getProjects = (projectData) => ({
   type: GET_PROJECTS_SUCCESS,
-  payload: project
+  payload: projectData
 });
 
 export const getProjectsError = (error) => ({
@@ -33,7 +33,7 @@ export const fetchProjects = () => (dispatch) => {
 export default function(
   state = {
     isLoading: false,
-    project: [],
+    projectData: [],
     error: ''
   },
   action
@@ -49,7 +49,7 @@ export default function(
       return {
         ...state,
         isLoading: false,
-        project: action.payload,
+        projectData: action.payload,
         error: ''
       };
     case GET_PROJECTS_ERROR:
