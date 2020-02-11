@@ -64,24 +64,6 @@ const SideBar = (props) => {
           >
             <Button>projects</Button>
           </Link>
-          <Link
-            to='projects'
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={750}
-          >
-            <Button>projects</Button>
-          </Link>
-          <Link
-            to='projects'
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={750}
-          >
-            <Button>projects</Button>
-          </Link>
         </Toolbar>
       </Drawer>
     </div>

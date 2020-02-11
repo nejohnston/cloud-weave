@@ -6,5 +6,5 @@ import projectReducer from './modules/projects';
 export default combineReducers({
   layout: layoutReducer,
   news: newsReducer,
-  project: projectReducer
+  projects: projectReducer
 });

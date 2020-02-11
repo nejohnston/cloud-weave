@@ -2,23 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Paper } from '@material-ui/core';
 
-const Projects = ({ projectData }) => {
-  return (
-    <div>
-      <Grid container className={classes.root} spacing={2}>
-        <Grid item xs={12}>
-          <Grid container justify='center' spacing={spacing}>
-            {data.map((data, i) => (
-              <Grid key={value} item>
-                <Paper className={classes.paper} />
-              </Grid>
-            ))}
-          </Grid>
+const Projects = ({ data }) => (
+  <div>
+    <Grid container>
+      <Grid item>
+        <Grid container justify='center'>
+          {data.map((data, i) => (
+            <Grid key={i} item>
+              <Paper>{data.language}</Paper>
+            </Grid>
+          ))}
         </Grid>
       </Grid>
-    </div>
-  );
-};
+    </Grid>
+  </div>
+);
 
 Projects.propTypes = {
   projectData: PropTypes.array,
