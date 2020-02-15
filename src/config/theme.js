@@ -1,7 +1,7 @@
-import getMuiTheme from '@material-ui/styles/getMuiTheme';
-import { blueGrey900, white } from '@material-ui/styles/colors';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { blueGrey900, white } from 'material-ui/styles/colors';
 
-export default getMuiTheme({
+export default createMuiTheme({
   palette: {
     textColor: blueGrey900,
     alternateTextColor: white,

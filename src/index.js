@@ -13,20 +13,28 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 import Layout from './components/Layout';
 import AboutContainer from './containers/AboutContainer';
-import { MuiThemeProvider } from 'material-ui/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core';
 
-const theme = createMuiTheme();
+const theme = React.useMemo(
+  () =>
+    createMuiTheme({
+      palette: {
+        type: prefersDarkMode ? 'dark' : 'light'
+      }
+    }),
+  [ prefersDarkMode ]
+);
 
 const Portfolio = () => (
-  <MuiThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
     <Provider store={store}>
       <Layout>
         <AboutContainer />
         <ProjectsContainer />
       </Layout>
     </Provider>
-  </MuiThemeProvider>
+  </ThemeProvider>
 );
 
 ReactDOM.render(<Portfolio />, document.getElementById('root'));
