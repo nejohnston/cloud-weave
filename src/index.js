@@ -8,7 +8,7 @@ import ProjectsContainer from './containers/ProjectsContainer';
 
 import * as serviceWorker from './serviceWorker';
 
-import './index.css';
+import './index.scss';
 import Layout from './components/Layout';
 import AboutContainer from './containers/AboutContainer';
 import { ThemeProvider } from '@material-ui/core/styles';
