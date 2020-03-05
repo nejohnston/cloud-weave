@@ -1,11 +1,10 @@
 import React from 'react';
 import HeaderBar from '../HeaderBar';
 import ToTopButton from '../ToTopButton/ToTopButton';
-import { connect } from 'react-redux';
 
 import './styles.css';
 
-const Layout = ({ window, children }) => {
+const Layout = ({ children }) => {
   return (
     <div id='header' className='root'>
       <HeaderBar />
@@ -17,8 +16,4 @@ const Layout = ({ window, children }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  window: state.layout.window
-});
-
-export default connect(mapStateToProps)(Layout);
+export default Layout;

@@ -22,3 +22,8 @@ export default function(
       return state;
   }
 }
+// const mapStateToProps = (state) => ({
+//   window: state.layout.window
+// });
+
+// export default connect(mapStateToProps)(Layout);
