@@ -4,18 +4,12 @@ import ToTopButton from '../ToTopButton/ToTopButton';
 import { connect } from 'react-redux';
 
 import './styles.css';
-import SideBar from '../SideBar';
 
 const Layout = ({ window, children }) => {
   return (
     <div id='header' className='root'>
-      {window <= 800 ? <HeaderBar /> : <SideBar />}
-      <div
-        id='header'
-        className={
-          window <= 800 ? 'portfolioContainer' : 'portfolioContainerSidebar'
-        }
-      >
+      <HeaderBar />
+      <div id='header' className='portfolioContainer'>
         {children}
       </div>
       <ToTopButton />
