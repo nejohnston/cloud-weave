@@ -6,10 +6,10 @@ import ToTopButton from '../ToTopButton/ToTopButton';
 
 import './styles.css';
 
-const Layout = ({ children, dataLoading }) => {
+const Layout = ({ children, window, dataLoading }) => {
   return (
     <div>
-      <HeaderBar />
+      <HeaderBar window={window} />
       <div className='portfolioContainer'>{children}</div>
       <ToTopButton />
     </div>
@@ -21,6 +21,7 @@ Layout.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
+  window: state.layout.window,
   dataLoading: state.layout.dataLoading
 });
 

@@ -20,7 +20,7 @@ const styles = {
   header: {
     display: 'flex',
     justifyContent: 'space-between',
-    width: '80vw',
+    width: '90vw',
     minWidth: '300px',
     alignItems: 'center',
     padding: '0'
@@ -39,7 +39,7 @@ const Loader = () => (
   </div>
 );
 
-const HeaderBar = (props) => {
+const HeaderBar = (props, window) => {
   const { classes } = props;
 
   const [ anchorEl, setAnchorEl ] = React.useState(null);
@@ -52,7 +52,7 @@ const HeaderBar = (props) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  console.log(props.window);
   return (
     <div id='header'>
       <AppBar
@@ -62,16 +62,22 @@ const HeaderBar = (props) => {
       >
         <Toolbar className={classes.header}>
           <div className={classes.iconTitleContainer}>
-            <Loader />
-            <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
-              {/* <Typography variant='h5' component='h6'>
-                Tech Weave
-              </Typography> */}
-            </Link>
+            {props.window < 769 ? (
+              <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
+                <Loader />
+              </Link>
+            ) : (
+              <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
+                <Typography variant='h5' component='h6'>
+                  Tech Weave
+                </Typography>
+              </Link>
+            )}
           </div>
           <IconButton
             aria-controls='simple-menu'
             aria-haspopup='true'
+            color='#2f3545'
             onClick={handleClick}
           >
             <MenuIcon />

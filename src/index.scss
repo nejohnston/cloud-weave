@@ -15,7 +15,7 @@ code {
 
 .loader {
   --path: #2f3545;
-  --dot: #5628ee;
+  --dot: #2f3545;
   --duration: 3s;
   width: 44px;
   height: 44px;
@@ -43,7 +43,7 @@ code {
     circle {
       fill: none;
       stroke: var(--path);
-      stroke-width: 10px;
+      stroke-width: 5px;
       stroke-linejoin: round;
       stroke-linecap: round;
     }
