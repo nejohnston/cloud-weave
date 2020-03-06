@@ -28,14 +28,14 @@ export const getNewsError = (error) => ({
 //     .catch((error) => dispatch(getAboutError(error)));
 // };
 
-export default function(
+export default (
   state = {
     isLoading: false,
     news: [],
     error: null
   },
   action
-) {
+) => {
   switch (action.type) {
     case GET_NEWS_LOADING:
       return {
@@ -57,4 +57,4 @@ export default function(
     default:
       return state;
   }
-}
+};

@@ -1,25 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import HeaderBar from '../HeaderBar';
 import ToTopButton from '../ToTopButton/ToTopButton';
 
 import './styles.css';
 
-const Loader = () => (
-  <div class='loader triangle'>
-    <svg viewBox='0 0 86 80'>
-      <polygon points='43 8 79 72 7 72' />
-    </svg>
-  </div>
-);
-
 const Layout = ({ children, dataLoading }) => {
   return (
-    <div id='header' className='root'>
+    <div>
       <HeaderBar />
-      <div id='header' className='portfolioContainer'>
-        {children}
-      </div>
+      <div className='portfolioContainer'>{children}</div>
       <ToTopButton />
     </div>
   );
@@ -30,8 +21,7 @@ Layout.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  authenticated: state.auth.authenticated,
-  userLoading: state.auth.userLoading
+  dataLoading: state.layout.dataLoading
 });
 
 export default connect(mapStateToProps)(Layout);

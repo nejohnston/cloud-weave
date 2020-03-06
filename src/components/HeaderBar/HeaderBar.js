@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   AppBar,
   Toolbar,
-  Avatar,
+  Typography,
   Menu,
   MenuItem,
   IconButton
@@ -14,11 +14,30 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-scroll';
 
 const styles = {
+  headerContainer: {
+    alignItems: 'center'
+  },
   header: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    width: '80vw',
+    minWidth: '300px',
+    alignItems: 'center',
+    padding: '0'
+  },
+  iconTitleContainer: {
+    display: 'flex',
+    flexDirection: 'row'
   }
 };
+
+const Loader = () => (
+  <div class='loader triangle'>
+    <svg viewBox='0 0 86 80'>
+      <polygon points='43 8 79 72 7 72' />
+    </svg>
+  </div>
+);
 
 const HeaderBar = (props) => {
   const { classes } = props;
@@ -36,11 +55,20 @@ const HeaderBar = (props) => {
 
   return (
     <div id='header'>
-      <AppBar position='fixed' color='default'>
+      <AppBar
+        position='fixed'
+        color='default'
+        className={classes.headerContainer}
+      >
         <Toolbar className={classes.header}>
-          <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
-            <Avatar>NJ</Avatar>
-          </Link>
+          <div className={classes.iconTitleContainer}>
+            <Loader />
+            <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
+              {/* <Typography variant='h5' component='h6'>
+                Tech Weave
+              </Typography> */}
+            </Link>
+          </div>
           <IconButton
             aria-controls='simple-menu'
             aria-haspopup='true'

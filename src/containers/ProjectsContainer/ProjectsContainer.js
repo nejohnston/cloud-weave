@@ -11,7 +11,7 @@ class ProjectsContainer extends Component {
   constructor(props) {
     super(props);
   }
-  componentWillMount() {
+  componentDidMount() {
     var config = {
       apiKey: 'AIzaSyDT3UHIOnWQ8bBk2EUdLOYq0XfQbYaDJ8A',
       authDomain: 'portfolio-c50b3.firebaseapp.com',
