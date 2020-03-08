@@ -22,6 +22,7 @@ const styles = {
     justifyContent: 'space-between',
     width: '90vw',
     minWidth: '300px',
+    maxWidth: '800px',
     alignItems: 'center',
     padding: '0'
   },
@@ -32,9 +33,9 @@ const styles = {
 };
 
 const Loader = () => (
-  <div class='loader triangle'>
-    <svg viewBox='0 0 86 80'>
-      <polygon points='43 8 79 72 7 72' />
+  <div className='loader triangle'>
+    <svg viewBox='0 0 81 75'>
+      <polygon points='38 3 74 67 2 67' />
     </svg>
   </div>
 );
@@ -52,71 +53,72 @@ const HeaderBar = (props, window) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  console.log(props.window);
+  console.log(window);
   return (
-    <div id='header'>
-      <AppBar
-        position='fixed'
-        color='default'
-        className={classes.headerContainer}
-      >
-        <Toolbar className={classes.header}>
-          <div className={classes.iconTitleContainer}>
-            {props.window < 769 ? (
+    <AppBar
+      position='fixed'
+      color='default'
+      className={classes.headerContainer}
+    >
+      <Toolbar className={classes.header}>
+        <div className={classes.iconTitleContainer}>
+          {props.window < 769 ? (
+            <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
+              <Loader />
+            </Link>
+          ) : (
+            <div className={classes.iconTitleContainer}>
+              <Loader />
               <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
-                <Loader />
-              </Link>
-            ) : (
-              <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
-                <Typography variant='h5' component='h6'>
+                <Typography variant='h5' component='h5'>
                   Tech Weave
                 </Typography>
               </Link>
-            )}
-          </div>
-          <IconButton
-            aria-controls='simple-menu'
-            aria-haspopup='true'
-            color='#2f3545'
-            onClick={handleClick}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Menu
-            id='simple-menu'
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
-            <MenuItem>
-              <Link
-                to='about'
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={750}
-                onClick={handleClose}
-              >
-                About
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link
-                to='projects'
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={750}
-                onClick={handleClose}
-              >
-                Projects
-              </Link>
-            </MenuItem>
-          </Menu>
-        </Toolbar>
-      </AppBar>
-    </div>
+            </div>
+          )}
+        </div>
+        <IconButton
+          aria-controls='simple-menu'
+          aria-haspopup='true'
+          // color='#2f3545'
+          onClick={handleClick}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Menu
+          id='simple-menu'
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem>
+            <Link
+              to='about'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={750}
+              onClick={handleClose}
+            >
+              About
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link
+              to='projects'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={750}
+              onClick={handleClose}
+            >
+              Projects
+            </Link>
+          </MenuItem>
+        </Menu>
+      </Toolbar>
+    </AppBar>
   );
 };
 

@@ -17,13 +17,13 @@ code {
   --path: #2f3545;
   --dot: #2f3545;
   --duration: 3s;
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
   position: relative;
   &:before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     position: absolute;
     display: block;
@@ -36,8 +36,9 @@ code {
   }
   svg {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
     rect,
     polygon,
     circle {
@@ -68,8 +69,8 @@ code {
   &.triangle {
     width: 48px;
     &:before {
-      left: 21px;
-      transform: translate(-10px, -18px);
+      left: 16px;
+      transform: translate(-10px, -24px);
       animation: dotTriangle var(--duration)
         cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
     }
@@ -102,7 +103,7 @@ code {
 
 .loader {
   display: inline-block;
-  margin: 0 16px;
+  margin: 0;
 }
 
 html {

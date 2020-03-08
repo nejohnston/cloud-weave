@@ -5,19 +5,31 @@ import HeaderBar from '../HeaderBar';
 import ToTopButton from '../ToTopButton/ToTopButton';
 
 import './styles.css';
+import { withStyles } from '@material-ui/core';
 
-const Layout = ({ children, window, dataLoading }) => {
+const styles = {
+  rootContainer: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    paddingTop: '64px',
+    maxWidth: '800px'
+  }
+};
+
+const Layout = (props) => {
+  const { classes, window, children } = props;
   return (
     <div>
       <HeaderBar window={window} />
-      <div className='portfolioContainer'>{children}</div>
+      <div className={classes.rootContainer}>{children}</div>
       <ToTopButton />
     </div>
   );
 };
 
 Layout.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  window: PropTypes.number
 };
 
 const mapStateToProps = (state) => ({
@@ -25,4 +37,4 @@ const mapStateToProps = (state) => ({
   dataLoading: state.layout.dataLoading
 });
 
-export default connect(mapStateToProps)(Layout);
+export default connect(mapStateToProps)(withStyles(styles)(Layout));
