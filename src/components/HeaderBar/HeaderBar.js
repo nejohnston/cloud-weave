@@ -15,7 +15,9 @@ import { Link } from 'react-scroll';
 
 const styles = {
   headerContainer: {
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    color: '#fff'
   },
   header: {
     display: 'flex',
@@ -55,70 +57,82 @@ const HeaderBar = (props, window) => {
   };
   console.log(window);
   return (
-    <AppBar
-      position='fixed'
-      color='default'
-      className={classes.headerContainer}
-    >
-      <Toolbar className={classes.header}>
-        <div className={classes.iconTitleContainer}>
-          {props.window < 769 ? (
-            <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
-              <Loader />
-            </Link>
-          ) : (
-            <div className={classes.iconTitleContainer}>
-              <Loader />
+    <div>
+      <AppBar
+        position='fixed'
+        color='default'
+        className={classes.headerContainer}
+      >
+        <Toolbar className={classes.header}>
+          <div className={classes.iconTitleContainer}>
+            {props.window < 769 ? (
               <Link to='/' spy={true} smooth={true} offset={-70} duration={750}>
-                <Typography variant='h5' component='h5'>
-                  Tech Weave
-                </Typography>
+                <Loader />
               </Link>
-            </div>
-          )}
-        </div>
-        <IconButton
-          aria-controls='simple-menu'
-          aria-haspopup='true'
-          // color='#2f3545'
-          onClick={handleClick}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Menu
-          id='simple-menu'
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
-          <MenuItem>
-            <Link
-              to='about'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={750}
-              onClick={handleClose}
-            >
-              About
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link
-              to='projects'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={750}
-              onClick={handleClose}
-            >
-              Projects
-            </Link>
-          </MenuItem>
-        </Menu>
-      </Toolbar>
-    </AppBar>
+            ) : (
+              <div className={classes.iconTitleContainer}>
+                <Loader />
+                <Link
+                  to='/'
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={750}
+                >
+                  <Typography
+                    variant='h5'
+                    component='h5'
+                    style={{ color: '#fff' }}
+                  >
+                    Tech Weave
+                  </Typography>
+                </Link>
+              </div>
+            )}
+          </div>
+          <IconButton
+            aria-controls='simple-menu'
+            aria-haspopup='true'
+            // color='#2f3545'
+            onClick={handleClick}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            id='simple-menu'
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem>
+              <Link
+                to='about'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={750}
+                onClick={handleClose}
+              >
+                About
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+                to='projects'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={750}
+                onClick={handleClose}
+              >
+                Projects
+              </Link>
+            </MenuItem>
+          </Menu>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 };
 
